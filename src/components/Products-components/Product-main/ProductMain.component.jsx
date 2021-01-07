@@ -1,4 +1,4 @@
-const Product_main = () => {
+const ProductMain = () => {
     return (
         <div className='product-main'>
             product-main
@@ -6,4 +6,4 @@ const Product_main = () => {
     )
 }
 
-export default Product_main;
+export default ProductMain;
