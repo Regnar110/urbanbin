@@ -8,23 +8,19 @@ const Navigation = ({ navType }) => {
     const routesArray = [
         {
             path: '/',
-            routeFirst: 'H',
-            route: 'OME'
+            route: 'HOME'
         },
         {
             path: '/about',
-            routeFirst: 'C',
-            route: 'OMPANY'
+            route: 'COMPANY'
         },
         {
             path: '/products',
-            routeFirst: 'P',
-            route: 'RODUCTS'
+            route: 'PRODUCTS'
         },
         {
             path: '/contact',
-            routeFirst: 'C',
-            route: 'ONTACT US'
+            route: 'CONTACT US'
         }
     ]
     
@@ -59,7 +55,6 @@ const Navigation = ({ navType }) => {
                             <div key={index} className='nav-route'>
                                 <Link to={path}>
                                     <div className='route-content'>
-                                       <span>{routeFirst}</span>
                                        {route}
                                     </div>
                                     <div className='underline'/>

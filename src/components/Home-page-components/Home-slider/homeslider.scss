@@ -15,11 +15,11 @@
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        font-size: 50px;
+        font-size: calc(25px + (50 - 25) * ((100vw - 280px) / (1600 - 280)));
         font-weight: 500;
         color: white;
         p{
-            margin: 0 0 150px 120px;
+            margin: 0 0 calc(80px + (150 - 80) * ((100vw - 280px) / (1600 - 280))) calc(20px + (120 - 20) * ((100vw - 280px) / (1600 - 280)));
         }
     }
   }
@@ -46,7 +46,7 @@
           top: 50%;
           transform: translateY(-50%);
           z-index: 10;
-          background: url('../../../assets/r-arrow.svg') no-repeat center center / 30px;
+          background: url('../../../assets/r-arrow.svg') no-repeat center center / 20px;
           width: 60px;
           height: 60px;
           text-indent: -9999px;

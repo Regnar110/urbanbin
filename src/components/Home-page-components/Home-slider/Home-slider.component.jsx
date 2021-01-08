@@ -23,12 +23,11 @@ const HomeSlider = () => {
                 backgroundSize:'cover'
                 }}>
                     <p>
-                        Nature-friendly solutions
+                        Nature-friendly products
                     </p>
                 </div>
             </Slider>
         </div>
-
     )
 }
 
