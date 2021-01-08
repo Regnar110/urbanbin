@@ -3,24 +3,28 @@ import './navigation.scss'
 import {Link} from 'react-router-dom'
 import UrbanBinLogo from '../../assets/urbanbin-logo.svg'
 
-const Navigation = () => {
+const Navigation = ({ navType }) => {
     
     const routesArray = [
         {
             path: '/',
-            route: 'HOME'
+            routeFirst: 'H',
+            route: 'OME'
         },
         {
             path: '/about',
-            route: 'ABOUT'
+            routeFirst: 'C',
+            route: 'OMPANY'
         },
         {
             path: '/products',
-            route: 'PRODUCTS'
+            routeFirst: 'P',
+            route: 'RODUCTS'
         },
         {
             path: '/contact',
-            route: 'CONTACT'
+            routeFirst: 'C',
+            route: 'ONTACT US'
         }
     ]
     
@@ -34,12 +38,14 @@ const Navigation = () => {
     }
     
     useEffect(()=> {
-        window.addEventListener('scroll', handleScrollChange)
+        if(navType==='large'){ // dodane z powodu tego, że komponent nie dopuszczał do wyrenderowania małego paska nawigacyjnego bo próbował odpalić funkcję handleScrollChange. NavType to argument przekazany z App który zawiera 'large' lub 'small' - w zależności jaki pasek powinien zostać wyświetlony
+           window.addEventListener('scroll', handleScrollChange) 
+        }
         return () => {
             console.log('event-listener clearing')
             window.removeEventListener('scroll', handleScrollChange)
         }
-    }, [])
+    }, [navType])
 
     return (
         <nav className='navigation'>
@@ -48,11 +54,12 @@ const Navigation = () => {
             </div>
             <div className='navigation-routes'>
                 {
-                    routesArray.map(({path, route}) => {
+                    routesArray.map(({path, route, routeFirst}, index) => {
                         return(
-                            <div className='nav-route'>
+                            <div key={index} className='nav-route'>
                                 <Link to={path}>
                                     <div className='route-content'>
+                                       <span>{routeFirst}</span>
                                        {route}
                                     </div>
                                     <div className='underline'/>

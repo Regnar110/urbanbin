@@ -1,7 +1,7 @@
 
 const Contact = () => {
   return (
-    <div className='App'>
+    <div id='section' className='App'>
       Contact
     </div>
   );

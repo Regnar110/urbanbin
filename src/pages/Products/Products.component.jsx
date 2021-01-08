@@ -6,7 +6,7 @@ const Products = (props) => {
   const {match} = props;
   console.log(match)
   return (
-    <div className='Products'>
+    <div id='section' className='Products'>
       <Link to={`${match.url}/mgs220`}>Product Mgs220</Link>
       <Switch>
         <Route exact path={`${match.url}`}>

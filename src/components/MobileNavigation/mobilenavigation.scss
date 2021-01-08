@@ -1,0 +1,61 @@
+@mixin full-row-center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-wrapper {
+        .small-logo {
+        position: relative;
+        transform: translateX(15%);
+        width: 180px;
+        img {
+            width: 100%;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .items-wrapper {
+        font-family: 'Roboto Condensed', sans-serif;
+        @include full-row-center-flex;
+        flex-direction: column;
+        margin-top: 20px;
+        .menu-item {
+            text-align: center;
+            font-size: 25px;
+            padding: 20px 0px 20px;
+            border: none;
+            cursor: pointer;
+
+            .link {
+                color: rgb(0, 0, 0);
+                padding: 10px;
+                text-align: center;
+                @include full-row-center-flex;
+                flex-direction: column;
+                .underline {
+                    height: 1px;
+                    width: 110%;
+                    background-color: #2a31f2;
+                }
+            }
+        }
+
+        .social {
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+
+    }       
+     &:focus {
+        outline: none;
+    }
+
+
+}    
+

@@ -1,8 +1,9 @@
+import HomeSlider from '../../components/Home-page-components/Home-slider/Home-slider.component'
 
 const Home = () => {
   return (
-    <div className='App'>
-      Home
+    <div id='section' className='app'>
+      <HomeSlider />
     </div>
   );
 }
