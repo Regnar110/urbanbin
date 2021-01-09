@@ -1,0 +1,30 @@
+.home-quality {
+    width: 100%;
+    height: 200px;
+
+    .home-quality-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #000000c7;
+
+        .home-quality-content {
+            width: 80%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-family: 'Open Sans Condensed', sans-serif;
+            color: white;
+            font-weight: 700;
+            letter-spacing: 5px;
+            font-size: calc(25px + (80 - 25) * ((100vw - 280px) / (1600 - 280))) 
+        }
+
+        @media screen and(max-width: 400px) {
+            .home-quality-content {
+                text-align: center;
+            }
+        }
+    }
+}
