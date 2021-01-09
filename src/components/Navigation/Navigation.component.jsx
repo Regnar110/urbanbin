@@ -28,17 +28,16 @@ const Navigation = ({ navType }) => {
         let position = document.querySelector('body').getBoundingClientRect();
         const navbar = document.querySelector('.navigation')
         position.y < -1 ?
-            navbar.style.height='105px'
+            navbar.style.height='100px'
         :
             navbar.style.height='130px'
     }
-    
+
     useEffect(()=> {
         if(navType==='large'){ // dodane z powodu tego, że komponent nie dopuszczał do wyrenderowania małego paska nawigacyjnego bo próbował odpalić funkcję handleScrollChange. NavType to argument przekazany z App który zawiera 'large' lub 'small' - w zależności jaki pasek powinien zostać wyświetlony
            window.addEventListener('scroll', handleScrollChange) 
         }
         return () => {
-            console.log('event-listener clearing')
             window.removeEventListener('scroll', handleScrollChange)
         }
     }, [navType])
