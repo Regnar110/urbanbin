@@ -1,7 +1,9 @@
 import './productcard.scss'
-const ProductCard = ({name, image}) => {
+import { withRouter } from "react-router-dom";
+
+const ProductCard = ({name, image, UrlLink, history}) => {
     return(
-        <div className='product-card' style={{
+        <div className='product-card' onClick={() => history.push(`${UrlLink}`)} style={{
             background: `url(${image}) center center no-repeat`,
             backgroundSize: 'cover'
         }}>
@@ -12,4 +14,4 @@ const ProductCard = ({name, image}) => {
     )
 }
 
-export default ProductCard
+export default withRouter(ProductCard)

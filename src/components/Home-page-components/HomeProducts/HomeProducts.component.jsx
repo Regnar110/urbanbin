@@ -10,12 +10,13 @@ const HomeProducts = ({productList}) => {
             <div className='home-products-content'>
                 <div className='product-cards'>
                     {
-                        productList.map(({product, image}, index) => {
-                            return <ProductCard key={index} name={product} image={image} />
+                        productList.map(({product, image, UrlLink}, index) => {
+                            return <ProductCard key={index} name={product} image={image} UrlLink={UrlLink}/>
                         })
                     }
                     
                 </div>
+
             </div>
         </div>
     )
