@@ -1,0 +1,19 @@
+.custom-button {
+    cursor: pointer;
+    border: 1px solid black;
+    background: linear-gradient(to left, transparent 50%, #2a31f2a4 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;    
+    padding: 20px 30px;
+    margin: 30px 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    transition: .3s ease;
+
+    &:hover {
+        background-position: left;
+        color: white;
+        border: 1px solid white;
+    }
+}

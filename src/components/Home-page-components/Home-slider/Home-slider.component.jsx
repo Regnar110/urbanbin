@@ -8,7 +8,7 @@ const HomeSlider = ({sliderList}) => {
 
     return (
         <div className='home-slider'>
-            <Slider className="slider-wrapper" autoplay={1400}>
+            <Slider className="slider-wrapper" autoplay={3000}>
                 {
                     sliderList.map(({image, text}, index) => {
                         return (

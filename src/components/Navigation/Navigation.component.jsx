@@ -28,9 +28,9 @@ const Navigation = ({ navType }) => {
         let position = document.querySelector('body').getBoundingClientRect();
         const navbar = document.querySelector('.navigation')
         position.y < -1 ?
-            navbar.style.height='85px'
+            navbar.style.height='105px'
         :
-            navbar.style.height='115px'
+            navbar.style.height='130px'
     }
     
     useEffect(()=> {
