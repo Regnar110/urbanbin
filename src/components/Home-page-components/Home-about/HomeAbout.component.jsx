@@ -13,7 +13,7 @@ const HomeAbout = () => {
                 Since 2000, we have been systematically increasing the range of the offered containers and today we offer a full package to meet the needs of the market.
             </p>
         </div>
-        <CustomButton name={'Company'} UrlLink='/company'/>
+        <CustomButton name={'Company'} buttonUrlLink='/company'/>
         </div>
     )
 }
