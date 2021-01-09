@@ -2,17 +2,13 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     font-family: 'Open Sans Condensed', sans-serif;
     background-color: #f5f5f5;
 
     .home-about-content {
-        padding: 20px;
         text-align: justify;
         width: 60%;
-        h2 {
-            font-size: calc(25px + (35 - 25) * ((100vw - 280px) / (1600 - 280)));
-        }
-
         p {
             font-size: calc(17px + (20 - 17) * ((100vw - 280px) / (1600 - 280)));
             color: rgba(0, 0, 0, 0.5);

@@ -1,0 +1,18 @@
+.home-products {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+    .home-products-content {
+        width: 80%;
+
+        .product-cards {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}   

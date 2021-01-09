@@ -1,0 +1,8 @@
+.home-header {
+    width: 60%;
+    padding: 20px 0 20px 0;
+
+    h2 {
+        font-size: calc(25px + (35 - 25) * ((100vw - 280px) / (1600 - 280)));
+    }
+}
