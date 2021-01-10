@@ -15,22 +15,28 @@ const Contact = () => {
   const [requestStatus, changeRequestStatus] = useState('')
 
   const handleSubmit = async () => {
-    const response = await fetch('http://localhost:3001/sendmail', {
-                method: "POST",
-                headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'}, 
-                body: JSON.stringify({
-                  sender: sender,
-                  email: email,
-                  message: message
+    try {
+      const response = await fetch('http://localhost:3001/sendmail', {
+                  method: "POST",
+                  headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'}, 
+                  body: JSON.stringify({
+                    sender: sender,
+                    email: email,
+                    message: message
+                  })
                 })
-              })
-    const data = await response.json();
-    changeRequestStatus(data.status)
-    setSender('')
-    setEmail('')
-    setMessage('')
+      const data = await response.json();
+      changeRequestStatus(data.status)
+    } catch {
+      changeRequestStatus('fail')
+    } finally {
+      setSender('')
+      setEmail('')
+      setMessage('')
+    }
+
   }
 
   const handleChange = event => {
