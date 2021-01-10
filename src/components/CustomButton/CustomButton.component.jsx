@@ -1,9 +1,9 @@
 import './custombutton.scss'
 import { withRouter } from 'react-router-dom'
 
-const CustomButton = ({name, buttonUrlLink, history}) => {
+const CustomButton = ({name, buttonUrlLink, history, type}) => {
     return (
-        <div className='custom-button' onClick={()=>history.push(buttonUrlLink)}>{name}</div>
+        <button className='custom-button' onClick={()=>history.push(buttonUrlLink)} type={type}>{name}</button>
     )
 }
 

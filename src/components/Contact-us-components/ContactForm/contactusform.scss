@@ -1,0 +1,86 @@
+$sub-color: grey;
+$main-color: black; 
+
+@mixin shrinkLabel { 
+    top: -14px;
+    font-size: 15px;
+    color: $main-color;
+  }
+
+.mail-form {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .mail-form-group {
+        position: relative;
+        width: 50%;
+        .mail-input {
+            background: none;
+            background-color: white;
+            color: $sub-color;
+            font-size: 18px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $sub-color;
+            margin: 25px 0;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus ~ .mail-input-label { // kiedy cokolwiek w form-input jest focusowane to celujemy w .form-input-label i wykonujemy kod w tym zawarty, w tym wypadku blok kodu zawartego w shrinkLabels()
+                @include shrinkLabel();
+            }
+        }
+
+        .mail-input-label {
+            color: $sub-color;
+            font-size: 19px;
+            font-weight: normal;
+            position: absolute;
+            pointer-events: none;
+            left: 5px;
+            top: 10px;
+            transition: 300ms ease all;
+
+            &.shrink {
+                @include shrinkLabel();
+            }
+        }
+
+    }
+
+    @media screen and(max-width: 600px) {
+        .mail-form-group {
+            width: 70%;
+        }
+    }
+
+    .mail-form-textarea {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        .mail-input-textarea {
+            text-align: start;
+            font-size: 20px;
+            height: 200px;
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        .mail-input-textarea-label {
+        font-size: 20px;
+        }
+    }
+    @media screen and(max-width: 600px) {
+        .mail-form-textarea {
+            width: 90%;
+        }
+    }
+}

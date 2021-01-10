@@ -1,0 +1,60 @@
+.contact {
+font-family: 'Open Sans Condensed', sans-serif;
+@mixin full-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-first-row {
+    background-color: #e3e3e3b0;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+
+    .company-data {
+        width: 50%;
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .data {
+                text-align: center;
+                .data-header {
+                    font-size: 30px;
+                    font-weight: 900;
+                }
+
+                p {
+                    font-size: 27px; 
+                }
+            }
+        }
+    }
+
+    .google-map {
+        @include full-flex-center;
+        flex-direction: column;
+        width: 50%;
+    }
+}
+@media screen and(max-width: 1060px) {
+    .contact-first-row {
+        flex-direction: column;
+        .company-data {
+            width: 100%
+        }
+        .google-map {
+            width: 100%
+        }
+    }
+}
+
+    .contact-second-row-mail-form {
+        @include full-flex-center;
+        flex-direction: column;
+        width: 100%;
+
+    }
+}
