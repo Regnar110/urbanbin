@@ -5,16 +5,32 @@ import ContactUsForm from '../../components/Contact-us-components/ContactForm/Co
 import ContactSectionHeader from '../../components/Contact-us-components/ContactSectionHeader/ContactSectionHeader.component'
 import ContactMap from '../../components/Contact-us-components/ContactMap/ContactMap.component'
 import CustomButton from '../../components/CustomButton/CustomButton.component'
+import RequestConfirm from '../../components/Contact-us-components/requestConfirm/RequestConfirm.component'
 
 const Contact = () => {
 
-  const [sender, setSender] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [sender, setSender] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [requestStatus, changeRequestStatus] = useState('')
 
-  const handleSubmit = event => { 
-    console.log(event)
-    event.preventDefault();
+  const handleSubmit = async () => {
+    const response = await fetch('http://localhost:3001/sendmail', {
+                method: "POST",
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'}, 
+                body: JSON.stringify({
+                  sender: sender,
+                  email: email,
+                  message: message
+                })
+              })
+    const data = await response.json();
+    changeRequestStatus(data.status)
+    setSender('')
+    setEmail('')
+    setMessage('')
   }
 
   const handleChange = event => {
@@ -56,12 +72,21 @@ const Contact = () => {
         </div>
       </div>
       <ContactSectionHeader sectionTitle={'SEND US A MESSAGE'} />
-      <form className='contact-second-row-mail-form' onSubmit={handleSubmit} method='POST'>
+      <div className='contact-second-row-mail-form' onSubmit={handleSubmit}>
         <ContactUsForm type='text' name='sender' value={sender} label='Name/Company' handleChange={handleChange} required/>
         <ContactUsForm type='email' name='email' value={email} label='E-mail' handleChange={handleChange} required/>
         <ContactUsForm type='textarea' name='message' value={message} label='Your Message' handleChange={handleChange} required/>
-        <CustomButton name='Send' type='submit'/>
-      </form>
+        <CustomButton name='Send' type='submit' method={handleSubmit}/>
+        {
+        requestStatus === 'success' ? 
+          <RequestConfirm title={'Message Sent'}/>
+        :
+          requestStatus === 'fail'?
+            <RequestConfirm title={'Message not sent'}/>
+          :
+            null
+      }
+      </div>
     </div>
   );
 }

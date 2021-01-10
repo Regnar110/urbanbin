@@ -22,7 +22,7 @@ const App = () => {
   }
 
   useEffect(() => { // check if window width is less or equal 621px and do action depending on this data
-    alert('Zrobiłem sekcję Contact - można już na nią wejść. Znajdują się na niej mapa z adresem firmy, Szczegóły firmy(adres, mail, telefon) oraz formularz kontaktowy, który trzeba potem dokończyć, żeby zatwierdzał formę i przesyłał wiadomości na wskazanego maila.')
+    alert('Stworzyłem serwer i połączyłem się z SMTP żeby było można wysyłać maile na wskazany email z formularza, który znajduje się na stronie COntact Us. Narazie tylko ja mam taką możliwość, ale gdy postawi się strone na hosting to się to zmieni')
     window.addEventListener('resize', changeNavBar);
     windowW <= 890 ?
       setNav('small')

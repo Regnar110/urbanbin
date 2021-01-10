@@ -52,6 +52,7 @@ font-family: 'Open Sans Condensed', sans-serif;
 }
 
     .contact-second-row-mail-form {
+        position: relative;
         @include full-flex-center;
         flex-direction: column;
         width: 100%;
