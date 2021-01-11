@@ -11,7 +11,7 @@ const Navigation = ({ navType }) => {
             route: 'HOME'
         },
         {
-            path: '/about',
+            path: '/company',
             route: 'COMPANY'
         },
         {
