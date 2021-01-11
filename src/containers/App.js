@@ -22,7 +22,7 @@ const App = () => {
   }
 
   useEffect(() => { // check if window width is less or equal 621px and do action depending on this data
-    alert('dodałem zawartość do strony Company. Dodałem też kilka animacji, któe uruchamiają się kiedy ktoś będzie widział animowany element(animacje wejścia)')
+    alert('Dodałem zawartość do strony Company. Dodałem też kilka animacji, któe uruchamiają się kiedy ktoś będzie widział animowany element(animacje wejścia)')
     window.addEventListener('resize', changeNavBar);
     windowW <= 890 ?
       setNav('small')
