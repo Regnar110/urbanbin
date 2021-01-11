@@ -54,9 +54,10 @@
 
     .company-content {
         display: flex;
+        flex-wrap: wrap;
 
         .tree-svg {
-            width: 30%;
+            width: 50%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -66,7 +67,7 @@
         }
 
         .tree-side-text {
-            width: 70%;
+            width: 50%;
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -86,6 +87,24 @@
             h2 {
                 font-size: 45px;
             }
+        }   
+        @media screen and(max-width: 820px) {
+            .tree-svg {
+                width: 100%;
+                justify-content: center;
+
+                img {
+                    width: 280px;
+                }
+            }
+
+            .tree-side-text {
+                padding: 0;
+                align-items: center;
+                width: 100%;
+            }
         }
     }
+
+
 }

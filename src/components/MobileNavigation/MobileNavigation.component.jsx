@@ -26,7 +26,7 @@ const MobileNavigation = () => {
             route: 'HOME'
         },
         {
-            path: '/about',
+            path: '/company',
             route: 'COMPANY'
         },
         {
