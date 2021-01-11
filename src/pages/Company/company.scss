@@ -1,3 +1,91 @@
-.company {
+
+.company {   
     font-family: 'Open Sans Condensed', sans-serif;
+    width: 100%;
+    
+    .company-start-image {
+        position: relative;
+        height: 500px;
+
+        .background-image-mask {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.685);
+
+            .image-text {
+                position: relative;
+                bottom: calc(50px + (100 - 50) * ((100vw - 400px) / (1600 - 400)));
+                color: white;
+                display: flex;
+                flex-direction: column;
+
+                #line-one {
+                    margin: 0;
+                    font-size: calc(20px + (30 - 20) * ((100vw - 280px) / (1600 - 280)));
+                }
+                
+                #line-two {
+                    margin:0px;
+                    font-size: calc(30px + (60 - 30) * ((100vw - 280px) / (1600 - 280)));
+                    
+                    span {
+                        font-size: calc(40px + (80 - 40) * ((100vw - 280px) / (1600 - 280)));
+                        color: rgb(72, 243, 72);
+                    }
+                }
+
+                @media screen and(max-width: 1100px) {
+                    #line-one {
+                        text-align: center;
+                    }
+
+                    #line-two {
+                        margin-top: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    .company-content {
+        display: flex;
+
+        .tree-svg {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img {
+                width: 400px;
+            }
+        }
+
+        .tree-side-text {
+            width: 70%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 30px;
+            text-align: justify;
+
+            .mission {
+                width: 80%;
+            }
+
+            .target {
+                width: 80%;
+            }
+
+            h2 {
+                font-size: 45px;
+            }
+        }
+    }
 }

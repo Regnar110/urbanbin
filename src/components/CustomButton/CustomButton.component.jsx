@@ -3,7 +3,15 @@ import { withRouter } from 'react-router-dom'
 
 const CustomButton = ({name, buttonUrlLink,method, history, type}) => {
     return (
-        <button className='custom-button' onClick={()=>{history.push(buttonUrlLink); method()}} type={type}>{name}</button>
+        <button className='custom-button' onClick={() => {
+            history.push(buttonUrlLink); 
+            if(method) {
+                method();
+            }
+            }} 
+            type={type}>
+                {name}
+            </button>
     )
 }
 

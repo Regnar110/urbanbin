@@ -22,7 +22,6 @@ const App = () => {
   }
 
   useEffect(() => { // check if window width is less or equal 621px and do action depending on this data
-    alert('Stworzyłem serwer i połączyłem się z SMTP żeby było można wysyłać maile na wskazany email z formularza, który znajduje się na stronie COntact Us. Narazie tylko ja mam taką możliwość, ale gdy postawi się strone na hosting to się to zmieni')
     window.addEventListener('resize', changeNavBar);
     windowW <= 890 ?
       setNav('small')
