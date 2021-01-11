@@ -1,5 +1,6 @@
 import './homeproducts.scss'
 import '../Home-header/HomeHeader.component'
+import Fade from 'react-reveal/Zoom';
 import HomeHeader from '../Home-header/HomeHeader.component';
 import ProductCard from '../Product-Card/ProductCard.component'
 import CustomButton from '../../CustomButton/CustomButton.component'
@@ -12,7 +13,7 @@ const HomeProducts = ({productList}) => {
                 <div className='product-cards'>
                     {
                         productList.map(({product, image, UrlLink}, index) => {
-                            return <ProductCard key={index} name={product} image={image} UrlLink={UrlLink}/>
+                            return <Fade><ProductCard key={index} name={product} image={image} UrlLink={UrlLink}/></Fade>
                         })
                     }
                 </div>

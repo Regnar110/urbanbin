@@ -1,8 +1,10 @@
 import './custombutton.scss'
+import Zoom from 'react-reveal/Zoom';
 import { withRouter } from 'react-router-dom'
 
 const CustomButton = ({name, buttonUrlLink,method, history, type}) => {
     return (
+        <Zoom>
         <button className='custom-button' onClick={() => {
             history.push(buttonUrlLink); 
             if(method) {
@@ -12,6 +14,7 @@ const CustomButton = ({name, buttonUrlLink,method, history, type}) => {
             type={type}>
                 {name}
             </button>
+        </Zoom>
     )
 }
 

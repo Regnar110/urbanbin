@@ -1,4 +1,5 @@
 import './company.scss'
+import Fade from 'react-reveal/Zoom';
 import SiteHeader from '../../components/SitesHeader/SiteHeader.component'
 import background from '../../assets/Home/HomeSlider/slide1.jpg'
 import tree from '../../assets/Company/tree.svg'
@@ -19,9 +20,12 @@ const Company = () => {
           </div>
         </div>
         <div className='company-content'>
+        <Fade left>
           <div className='tree-svg'>
             <img src={tree} />
           </div>
+        </Fade>
+          <Fade right>
           <div className='tree-side-text'>
             <div className='mission'>
               <h2>Our mission</h2>
@@ -34,6 +38,7 @@ const Company = () => {
                 Continuous development, improvement of production processes, taking a stable and friendly position on the market of manufacturers of waste containers. We want our products to reach the widest possible range of customers, so that we can together take care of the environment in which we live using non-flammable, easy to recycle waste containers.
             </div>
           </div>
+          </Fade>
         </div>
       </div>
     );

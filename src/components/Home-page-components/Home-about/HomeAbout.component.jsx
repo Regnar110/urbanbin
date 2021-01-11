@@ -1,9 +1,11 @@
 import './homeabout.scss';
+import Fade from 'react-reveal/Zoom';
 import HomeHeader from '../Home-header/HomeHeader.component'
 import CustomButton from '../../CustomButton/CustomButton.component'
 
 const HomeAbout = () => {
     return(
+        <Fade left>
         <div className='home-about'>
         <HomeHeader header={'Briefly about us'}/>
         <div className='home-about-content'>
@@ -15,6 +17,7 @@ const HomeAbout = () => {
         </div>
         <CustomButton name={'Company'} buttonUrlLink='/company'/>
         </div>
+        </Fade>
     )
 }
 

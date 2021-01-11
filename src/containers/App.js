@@ -22,6 +22,7 @@ const App = () => {
   }
 
   useEffect(() => { // check if window width is less or equal 621px and do action depending on this data
+    alert('dodałem zawartość do strony Company. Dodałem też kilka animacji, któe uruchamiają się kiedy ktoś będzie widział animowany element(animacje wejścia)')
     window.addEventListener('resize', changeNavBar);
     windowW <= 890 ?
       setNav('small')
@@ -41,7 +42,7 @@ const App = () => {
       <SidePopUpBar />
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route exact path='/about' component={Company} />
+        <Route exact path='/company' component={Company} />
         <Route exact path='/contact' component={Contact} />
         <Route path='/products' component={Products} />
       </Switch>
