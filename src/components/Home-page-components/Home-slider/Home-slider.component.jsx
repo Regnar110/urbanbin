@@ -13,9 +13,12 @@ const HomeSlider = ({sliderList}) => {
                     sliderList.map(({image, text}, index) => {
                         return (
                         <div key={index} className='slide-container' style={{
-                            background:`url(${image}) center center no-repeat`,
-                            backgroundSize:'cover'
+                            // backgroundImage:`url(${image})`,
+                            // backgroundSize: 'cover',
+                            // backgroundPosition: ''
+                            
                             }}>
+                            <img src={image} />
                                 <p>{text}</p>
                         </div>
                         )
