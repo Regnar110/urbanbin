@@ -10,6 +10,7 @@
         align-items: center;
         color: white;
         font-size: calc(27px + (40 - 27) * ((100vw - 280px) / (1600 - 280)));
+        white-space: nowrap;
         div {
             cursor: pointer;
             padding: 20px 20px;

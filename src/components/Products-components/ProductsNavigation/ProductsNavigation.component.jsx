@@ -50,7 +50,7 @@ const ProductNavigation = ({history}) => {
             <div className='opening-button'>
                 <div onClick={handleMenuOpen}>
                     <img alt='arrow' className={`${isMenuOpen ? 'rotate': ''}`} src={arrow}/>
-                    {isMenuOpen ? 'Chose your product' : 'See products'}
+                    {isMenuOpen ? 'Chose your product' : 'Click to see products'}
                 </div>
             </div>
             <div className={`${isMenuOpen ? 'open' : ''} navigation-drop`}>

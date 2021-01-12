@@ -1,4 +1,4 @@
-import {Switch, Route, Link} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import './products.scss'
 import ProductItem from '../../components/Products-components/Product-item/Product-item.component'
 import ProductMain from '../../components/Products-components/Product-main/ProductMain.component'
@@ -12,7 +12,7 @@ const Products = (props) => {
     <div id='section' className='products'>
     <SiteHeader siteHeader={'PRODUCTS'}/>
     <ProductNavigation />
-      <Link to={`${match.url}/mgs220`}>Product Mgs220</Link>
+      {/* <Link to={`${match.url}/mgs220`}>Product Mgs220</Link> */}
       <Switch>
         <Route exact path={`${match.url}`}>
           <ProductMain />
