@@ -6,7 +6,7 @@ import p1 from '../../assets/Home/ProductCard/p1.jpg'
 import p2 from '../../assets/Home/ProductCard/p2.jpg' 
 import p3 from '../../assets/Home/ProductCard/p3.jpg' 
 import p4 from '../../assets/Home/ProductCard/p4.jpg'
-import slide1 from '../../assets/Home/HomeSlider/slide1.jpg'
+import slide1 from '../../assets/Company/bg.jpg'
 import slide2 from '../../assets/Home/HomeSlider/slide2.jpg'
 import slide3 from '../../assets/Home/HomeSlider/slide3.jpg'
 

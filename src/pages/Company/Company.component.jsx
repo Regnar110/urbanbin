@@ -1,5 +1,5 @@
 import './company.scss'
-import background from '../../assets/Company/bg.jpg'
+import background from '../../assets/Home/HomeSlider/slide1.jpg'
 import tree from '../../assets/Company/tree.svg'
 
 
@@ -7,7 +7,7 @@ const Company = () => {
     return (
       <div id='section' className='company'>
         <div className='company-start-image' style={{
-          background: `url(${background}) center no-repeat`,
+          background: `url(${background}) center center no-repeat`,
           backgroundSize:`cover`
         }}>
           <div className='background-image-mask'>
