@@ -30,7 +30,7 @@ const Navigation = ({ navType }) => {
         position.y < -1 ?
             navbar.style.height='100px'
         :
-            navbar.style.height='130px'
+            navbar.style.height='0px'
     }
 
     useEffect(()=> {

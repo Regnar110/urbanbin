@@ -7,8 +7,8 @@ const Company = () => {
     return (
       <div id='section' className='company'>
         <div className='company-start-image' style={{
-          background: `url(${background}) center center no-repeat`,
-          backgroundSize:`cover`
+          background: `url(${background})center center no-repeat`,
+          backgroundSize: 'cover'
         }}>
           <div className='background-image-mask'>
             <div className='image-text'>

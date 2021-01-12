@@ -8,12 +8,14 @@ const HomeSlider = ({sliderList}) => {
 
     return (
         <div className='home-slider'>
-            <Slider className="slider-wrapper" autoplay={3000}>
+            <Slider className="slider-wrapper" >
                 {
                     sliderList.map(({image, text}, index) => {
                         return (
-                        <div key={index} className='slide-container'>
-                                <img alt='slide' src={image} />
+                        <div key={index} className='slide-container' style={{
+                            background: `url(${image}) center no-repeat`
+                        }}>
+                                {/* <img alt='slide' src={image} /> */}
                                 <p>{text}</p>
                         </div>
                         )
