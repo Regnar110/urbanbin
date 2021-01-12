@@ -18,7 +18,7 @@ const HomeSlider = ({sliderList}) => {
                             // backgroundPosition: ''
                             
                             }}>
-                            <img src={image} />
+                                <img src={image} />
                                 <p>{text}</p>
                         </div>
                         )
