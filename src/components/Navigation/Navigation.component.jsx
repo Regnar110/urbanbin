@@ -33,6 +33,11 @@ const Navigation = ({ navType }) => {
             navbar.style.height='0px'
     }
 
+    const handleScrollToTop = () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
     useEffect(()=> {
         if(navType==='large'){ // dodane z powodu tego, że komponent nie dopuszczał do wyrenderowania małego paska nawigacyjnego bo próbował odpalić funkcję handleScrollChange. NavType to argument przekazany z App który zawiera 'large' lub 'small' - w zależności jaki pasek powinien zostać wyświetlony
            window.addEventListener('scroll', handleScrollChange) 
@@ -53,7 +58,7 @@ const Navigation = ({ navType }) => {
                         return(
                             <div key={index} className='nav-route'>
                                 <Link to={path}>
-                                    <div className='route-content'>
+                                    <div className='route-content' onClick={handleScrollToTop}>
                                        {route}
                                     </div>
                                     <div className='underline'/>
