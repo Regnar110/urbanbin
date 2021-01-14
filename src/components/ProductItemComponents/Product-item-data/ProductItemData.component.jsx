@@ -3,7 +3,7 @@ import './productitemdata.scss'
 const ProductItemData = ({ productDetails }) => {
     return (
         <div className='details-container'>
-            <div className='details-header'>Technical details</div>
+            <div className='details-header'>Technical details card</div>
             {
                 productDetails.map(({type, content},index) => {
                     return (

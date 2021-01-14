@@ -16,7 +16,7 @@ const ProductItem = () => {
         },
         {
             type: 'Dimensions', 
-            content: [`width(mm) - 500`, 'height - 950', 'depth = 550'] 
+            content: [`width(mm) - 500`, 'height(mm) - 950', 'depth(mm) = 550'] 
         },
         {
             type: 'Mass', 
