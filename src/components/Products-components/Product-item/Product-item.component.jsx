@@ -9,6 +9,33 @@ import ProductItemWarranty from '../../ProductItemComponents/Product-item-warran
 
 const ProductItem = () => {
 
+    const productDetails = [
+        {
+            type: 'Capacity', 
+            content: ['Nominal capacity (L) - 120']
+        },
+        {
+            type: 'Dimensions', 
+            content: [`width(mm) - 500`, 'height - 950', 'depth = 550'] 
+        },
+        {
+            type: 'Mass', 
+            content: ['curb weight(kg) ~ 17', 'maximum load weight(kg) ~ 120'],
+        },
+        {
+            type: 'Material and construction', 
+            content: ['galvanized steel sheet - fireproof', 'performance standard - EN-840'],
+        },
+        {
+            type: 'Anti-corrosion protection and color', 
+            content: ['powder coating with FreiLacke paints', 'RAL color palette'],
+        },
+        {
+           type: 'Stickers', 
+           content: ['Custom sticker available'] 
+        }       
+    ]
+
     const [currentProduct, changeProduct] = useState([])
 
     let { productId } = useParams();
@@ -26,7 +53,7 @@ const ProductItem = () => {
                     <ProductItemSlider /> 
                 </div>
                 <div className='product-data'>
-                    <ProductItemData />
+                    <ProductItemData productDetails={productDetails}/>
                 </div>
             </div>
             <ProductItemWarranty />

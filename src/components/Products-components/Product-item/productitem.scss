@@ -2,9 +2,11 @@
     width: 100%;
 
     .first-row {
+        // background-color: #e3e3e3b0;
         display: flex;
         width: 100%;
         justify-content: center;
+        align-items: center;
 
         .slider-colors {
             width:50%;
@@ -13,6 +15,8 @@
 
         .product-data {
             width: 40%;
+            display: flex;
+            justify-content: center;
         }
     }
 
