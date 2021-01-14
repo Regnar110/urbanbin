@@ -7,12 +7,12 @@ import ProductNavigation from '../../components/Products-components/ProductsNavi
 
 const Products = (props) => {
   const {match} = props;
-  console.log(match)
   return (
     <div id='section' className='products'>
     <SiteHeader siteHeader={'PRODUCTS'}/>
     <ProductNavigation />
       {/* <Link to={`${match.url}/mgs220`}>Product Mgs220</Link> */}
+
       <Switch>
         <Route exact path={`${match.url}`}>
           <ProductMain />
@@ -21,6 +21,7 @@ const Products = (props) => {
           <ProductItem />
         </Route>
       </Switch>
+
     </div>
   );
 }

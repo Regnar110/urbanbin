@@ -16,27 +16,27 @@ const Home = () => {
   const productList = [
     {
       product: 'MGBS-120L',
-      UrlLink: '/products/mgbs120l',
+      UrlLink: '/products/mgbs-120l',
       image: p1
     },
     {
       product: 'MGBS-240L',
-      UrlLink: '/products/mgbs240l',
+      UrlLink: '/products/mgbs-240l',
       image: p2
     },
     {
       product: 'MGBS-700L',
-      UrlLink: '/products/mgbs700l',
+      UrlLink: '/products/mgbs-700l',
       image: p3
     },
     {
       product: 'MGBS-1100L',
-      UrlLink: '/products/mgbs1100l',
+      UrlLink: '/products/mgbs-1100l',
       image: p4
     },
     {
       product: 'MGBS-2500L',
-      UrlLink: '/products/mgbs2500l',
+      UrlLink: '/products/mgbs-2500l',
       image: p2
     },
     {

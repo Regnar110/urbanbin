@@ -28,9 +28,9 @@ const Navigation = ({ navType }) => {
         let position = document.querySelector('body').getBoundingClientRect();
         const navbar = document.querySelector('.navigation')
         position.y < -1 ?
-            navbar.style.height='100px'
+            navbar.style.height='120px'
         :
-            navbar.style.height='0px'
+            navbar.style.height='90px'
     }
 
     const handleScrollToTop = () => {

@@ -4,7 +4,7 @@ const ProductTile = ({img, desc}) => {
     return(
         <div class='tile'>
             <div className='tile-svg'>
-                <img src={img} />
+                <img alt='tile' src={img} />
             </div>
             <div className='tile-desc'>
                 {desc}

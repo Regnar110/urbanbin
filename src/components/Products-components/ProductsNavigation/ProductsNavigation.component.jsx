@@ -8,23 +8,23 @@ const ProductNavigation = ({history}) => {
     const productList = [
         {
             product: 'MGBS-120L',
-            UrlLink: '/products/mgbs120l'
+            UrlLink: '/products/mgbs-120l'
         },
         {
             product: 'MGBS-240L',
-            UrlLink: '/products/mgbs240l'
+            UrlLink: '/products/mgbs-240l'
         },
         {
             product: 'MGBS-700L',
-            UrlLink: '/products/mgbs700l'
+            UrlLink: '/products/mgbs-700l'
         },
         {
             product: 'MGBS-1100L',
-            UrlLink: '/products/mgbs1100l'
+            UrlLink: '/products/mgbs-1100l'
         },
         {
             product: 'MGBS-2500L',
-            UrlLink: '/products/mgbs2500l'
+            UrlLink: '/products/mgbs-2500l'
             
         },
         {

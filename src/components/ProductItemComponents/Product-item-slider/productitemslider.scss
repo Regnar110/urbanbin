@@ -1,0 +1,14 @@
+@mixin full-row-center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-slider-container {
+    div {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+}

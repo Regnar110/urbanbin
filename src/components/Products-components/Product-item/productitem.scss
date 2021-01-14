@@ -1,0 +1,36 @@
+.product-item {
+    width: 100%;
+
+    .first-row {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .slider-colors {
+            width:50%;
+            display: flex;
+        }
+
+        .product-data {
+            width: 40%;
+        }
+    }
+
+    @media screen and(max-width: 700px) {
+        .first-row {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            .slider-colors {
+                width: 100%;
+                flex-direction: column-reverse;
+                justify-content: center;
+            }
+
+            .product-data {
+                width: 100%;
+            }
+        }
+    }
+}
