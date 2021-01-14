@@ -17,7 +17,6 @@ const ProductItemColors = ({ handleColorClick }) => {
         {color: 'pink'},
         {color: 'brown'},
         {color: 'green'},
-        {color: 'dark'},
 
     ]
 
@@ -27,7 +26,9 @@ const ProductItemColors = ({ handleColorClick }) => {
                 colors.map(({ color }, index) => {
                     return <div key={index} onClick={() => {
                         handleColorClick(color)
-                    }} className='color' style={{backgroundColor: `${color}`}}/>
+                    }} className='color' style={{backgroundColor: `${color}`}}>
+                        {index}
+                    </div>
                 })
             }
         </div>

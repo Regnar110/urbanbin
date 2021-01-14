@@ -1,5 +1,6 @@
 import './homeproducts.scss'
 import '../Home-header/HomeHeader.component'
+
 import HomeHeader from '../Home-header/HomeHeader.component';
 import ProductCard from '../Product-Card/ProductCard.component'
 import CustomButton from '../../CustomButton/CustomButton.component'

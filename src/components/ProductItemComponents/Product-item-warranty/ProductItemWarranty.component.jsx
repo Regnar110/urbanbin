@@ -10,11 +10,11 @@ const ProductItemWarranty = () => {
                 backgroundSize: '100%'
             }}>
             <div className='mask'>
-                <img src={warrantyicon} />
+                <img alt='warrantybackground' src={warrantyicon} />
                     <p>
                         Lifetime warranty on discharge handles
                     </p>
-                <img src={warrantyicon} />
+                <img alt='icon' src={warrantyicon} />
             </div>
         </div>
     )

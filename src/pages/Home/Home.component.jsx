@@ -16,32 +16,32 @@ const Home = () => {
   const productList = [
     {
       product: 'MGBS-120L',
-      UrlLink: '/products/mgbs-120l',
+      UrlLink: 'mgbs-120l',
       image: p1
     },
     {
       product: 'MGBS-240L',
-      UrlLink: '/products/mgbs-240l',
+      UrlLink: 'mgbs-240l',
       image: p2
     },
     {
       product: 'MGBS-700L',
-      UrlLink: '/products/mgbs-700l',
+      UrlLink: 'mgbs-700l',
       image: p3
     },
     {
       product: 'MGBS-1100L',
-      UrlLink: '/products/mgbs-1100l',
+      UrlLink: 'mgbs-1100l',
       image: p4
     },
     {
       product: 'MGBS-2500L',
-      UrlLink: '/products/mgbs-2500l',
+      UrlLink: 'mgbs-2500l',
       image: p2
     },
     {
       product: 'STREET BINS',
-      UrlLink: '/products/street-bin',
+      UrlLink: 'street-bin',
       image: p4
     },
   ]

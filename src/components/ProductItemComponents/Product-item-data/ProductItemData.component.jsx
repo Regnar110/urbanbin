@@ -1,18 +1,32 @@
 import './productitemdata.scss'
+import ProductItemModal from '../ProductItemModal/ProductItemModal.component'
 
 const ProductItemData = ({ productDetails }) => {
     return (
         <div className='details-container'>
-            <div className='details-header'>Technical details card</div>
+            <div className='details-header'>Technical details</div>
             {
-                productDetails.map(({type, content},index) => {
+                productDetails.map(({type, content, button},index) => {
                     return (
-                        <div className='data'>
-                            <div key={index} className='data-header'>{type}:</div>
+                        <div key={index} className='data'>
+                            <div  className='data-header'>{type}</div>
                             {
-                                content.map((element,index) => {
-                                    return <span key={index}>- {element}</span>
+                                button? (
+                                    <div className='buttons'>
+                                    {
+                                        button.map(({text, image}, index) => {
+                                            return <div key={index} className='buttons'><ProductItemModal index={index} text={text} image={image}/></div>
+                                        })
+                                    }
+                                    </div>
+                                )
+                                :
+                                content.map((element, index) => {
+                                    return (
+                                        <span key={index}>- {element}</span>
+                                    )
                                 })
+  
                             }                
                         </div>
                     )
@@ -23,30 +37,3 @@ const ProductItemData = ({ productDetails }) => {
 }
 
 export default ProductItemData;
-
-
-{/* <div className='data'>
-<div className='data-header'>Capacity</div>
-<span>- Nominal capacity (L) - 120</span>                  
-</div>
-<div className='data'>
-<div className='data-header'>Dimensions</div>
-</div>
-<div className='data'>
-<div className='data-header'>Mass</div>
-</div>
-<div className='data'>
-<div className='data-header'> Material and construction</div>
-</div>
-<div className='data'>
-<div className='data-header'>Anti-corrosion protection and color</div>
-</div>
-<div className='data'>
-<div className='data-header'>Material and construction</div>
-</div>
-<div className='data'>
-<div className='data-header'>Available Colours</div>
-</div>
-<div className='data'>
-<div className='data-header'>Sticker</div>
-</div> */}

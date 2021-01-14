@@ -1,18 +1,20 @@
-import {Switch, Route} from 'react-router-dom';
+import {Switch, Route, withRouter} from 'react-router-dom';
+import { useEffect } from 'react'
 import './products.scss'
 import ProductItem from '../../components/Products-components/Product-item/Product-item.component'
 import ProductMain from '../../components/Products-components/Product-main/ProductMain.component'
 import SiteHeader from '../../components/SitesHeader/SiteHeader.component'
 import ProductNavigation from '../../components/Products-components/ProductsNavigation/ProductsNavigation.component'
 
-const Products = (props) => {
-  const {match} = props;
+const Products = ({match}) => {
+
+  useEffect(() => {
+  }, [match.params])
+  
   return (
     <div id='section' className='products'>
     <SiteHeader siteHeader={'PRODUCTS'}/>
     <ProductNavigation />
-      {/* <Link to={`${match.url}/mgs220`}>Product Mgs220</Link> */}
-
       <Switch>
         <Route exact path={`${match.url}`}>
           <ProductMain />
@@ -26,4 +28,4 @@ const Products = (props) => {
   );
 }
 
-export default Products;
+export default withRouter(Products);

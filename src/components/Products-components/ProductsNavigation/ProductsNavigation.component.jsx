@@ -3,33 +3,33 @@ import arrow from '../../../assets/Products/ProductsNavigation/arrow.svg'
 import { useState } from 'react'
 import { withRouter } from 'react-router-dom'
 
-const ProductNavigation = ({history}) => {
+const ProductNavigation = ({history, productChange}) => {
 
     const productList = [
         {
             product: 'MGBS-120L',
-            UrlLink: '/products/mgbs-120l'
+            UrlLink: 'mgbs-120l'
         },
         {
             product: 'MGBS-240L',
-            UrlLink: '/products/mgbs-240l'
+            UrlLink: 'mgbs-240l'
         },
         {
             product: 'MGBS-700L',
-            UrlLink: '/products/mgbs-700l'
+            UrlLink: 'mgbs-700l'
         },
         {
             product: 'MGBS-1100L',
-            UrlLink: '/products/mgbs-1100l'
+            UrlLink: 'mgbs-1100l'
         },
         {
             product: 'MGBS-2500L',
-            UrlLink: '/products/mgbs-2500l'
+            UrlLink: 'mgbs-2500l'
             
         },
         {
             product: 'Street Bins',
-            UrlLink: '/products/street-bin'
+            UrlLink: 'street-bin'
         }
 
 
@@ -57,7 +57,7 @@ const ProductNavigation = ({history}) => {
                 <ul>
                     {
                         productList.map(({product, UrlLink}, index) => {
-                            return <li key={index} className={`${isMenuOpen ? 'appear': ''} product`} onClick={(() => {history.push(UrlLink); handleMenuClose();})}>
+                            return <li key={index} className={`${isMenuOpen ? 'appear': ''} product`} onClick={(() => {history.push('/products/'+UrlLink); handleMenuClose();})}>
                                 {product}
 
                             </li>

@@ -6,7 +6,7 @@ import i3 from '../../../assets/Home/ProductCard/p3.jpg'
 
 import SimpleImageSlider from "react-simple-image-slider";
 
-const ProductItemSlider = () => {
+const ProductItemSlider = ({modelColor}) => {
     const windowWidth = window.innerWidth;
     
     const images = [
@@ -15,25 +15,26 @@ const ProductItemSlider = () => {
         { url: i3 },
     ]
 
-    const [sliderImages, setSliderImages] = useState(images)
+    const [sliderImages] = useState(images)
     const [sliederWidth, setSliderWidth] = useState('40%')
-    const [sliederheight, setSliderHeight] = useState(600)
 
     useEffect(() => {
-        if(windowWidth <= 700) {
+        console.log('slajder zamontowny') // przy zmianie koloru slajder sie re-renderuje.
+        if(windowWidth <= 800) {
             setSliderWidth('100%')
         }
-    }, [windowWidth])
+    }, [windowWidth, modelColor])
 
     return(
         <div className='product-slider-container'>
          <SimpleImageSlider
                     width={sliederWidth}
-                    height={sliederheight}
+                    height={600}
                     images={sliderImages}
                     showNavs={true}
                     slideDuration={0.3}
                 />
+                {modelColor}
         </div>
     )
 }

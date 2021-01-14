@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 
 const ProductCard = ({name, image, UrlLink, history}) => {
     return(
-        <div className='product-card' onClick={() => history.push(`${UrlLink}`)} style={{
+        <div className='product-card' onClick={() => history.push(`products/${UrlLink}`)} style={{
             background: `url(${image}) center center no-repeat`,
             backgroundSize: 'cover'
         }}>
