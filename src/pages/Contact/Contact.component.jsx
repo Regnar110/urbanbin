@@ -16,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:3001/sendmail', {
+      const response = await fetch('https://cryptic-tor-49247.herokuapp.com/sendmail', {
                   method: "POST",
                   headers: {
                     'Accept': 'application/json',
