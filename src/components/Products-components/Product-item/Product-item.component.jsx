@@ -27,7 +27,7 @@ const ProductItem = ({match}) => {
             redirect: 'follow'
           };
         try {
-            const response = await fetch(`http://localhost:3001/mgbs`, requestOptions)
+            const response = await fetch(`https://cryptic-tor-49247.herokuapp.com/mgbs`, requestOptions)
             const data = await response.json();
             console.log(data)
             setProductDetails(data.ProductDetails)
