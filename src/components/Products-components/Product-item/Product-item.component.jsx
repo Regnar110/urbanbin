@@ -6,73 +6,50 @@ import ProductItemSlider from '../../ProductItemComponents/Product-item-slider/P
 import ProductItemColors from '../../ProductItemComponents/Product-item-colors/Product-item-colors.component'
 import ProductItemData from '../../ProductItemComponents/Product-item-data/ProductItemData.component'
 import ProductItemWarranty from '../../ProductItemComponents/Product-item-warranty/ProductItemWarranty.component'
-import p1 from '../../../assets/Home/ProductCard/p1.jpg'
-import p2 from '../../../assets/Home/ProductCard/p2.jpg'
-import p3 from '../../../assets/Home/ProductCard/p3.jpg'
 
 
 const ProductItem = ({match}) => {
     let { productId } = useParams();
 
-    const productDetails = [
-        {   
-            type: 'Capacity', 
-            content: ['Nominal capacity (L) - 120']
-        },
-        {
-            type: 'Dimensions', 
-            content: [`width(mm) - 500`, 'height(mm) - 950', 'depth(mm) - 550'] ,
-        },
-        {
-            type: 'Mass', 
-            content: ['curb weight(kg) ~ 17', 'maximum load weight(kg) ~ 120'],
-        },
-        {
-            type: 'Material and construction', 
-            content: ['galvanized steel sheet - fireproof', 'performance standard - EN-840'],
-        },
-        {
-            type: 'Anti-corrosion protection and color', 
-            content: ['powder coating with FreiLacke paints', 'RAL color palette'],
-        },
-        {
-           type: 'Stickers', 
-           content: ['Custom sticker availables'] 
-        },
-        {
-            type: 'Colors', 
-            content: ['Colors possible to choose from the list next to the photo'] 
-        },
-        {
-            button: [
-                {
-                    text: 'See material certificate',
-                    image: p1
-                },
-                {
-                    text: 'See standard certificate',
-                    image: p2
-                },
-                {
-                    text: 'See technical drawing',
-                    image: p3
-                },
-            ]
-        }         
-    ]
-    const [model, setModel] = useState()
+    const [model, setModel] = useState('')
     const [modelColor, setModelColor] = useState('standard')
+    const [productDetails , setProductDetails] = useState([])
 
-    useEffect(() => {
+    const handleFetchProductDetails = async (currentProduct) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    model: currentProduct
+                  }),
+            redirect: 'follow'
+          };
+        try {
+            const response = await fetch(`http://localhost:3001/mgbs`, requestOptions)
+            const data = await response.json();
+            console.log(data)
+            setProductDetails(data.ProductDetails)
+
+        } catch(err) {
+
+            console.log(err)
+
+        }
+
+    }
+
+    useEffect(() => { // przy zamontowaniu będziemy ściągać dane techniczne konkretnego produktu + zdjęcia standard i zdjęcia techniczne
+        setModel(match.params.productId);
+        handleFetchProductDetails(match.params.productId);
         console.log('zostałem zamontowany i mój produkt to ' + match.params.productId+ 'a mój kolor to '+  modelColor) // stan się zmienia na bierząca po wejściu z home i w przerzycaniu menu
-        setModel(match.params.productId)
-    }, [match.params.productId])
+        
+    }, [model, match.params.productId, modelColor])
     
 
-    const handleColorClick = color => {
+    const handleColorClick = color => { // na kliknięcie koloru będziemy ściągać zdjęcia z bazy
         setModelColor(color)
-        console.log(model)
-        console.log(modelColor)
         console.log(`wybrany kolor to ${color}`)
     }
 

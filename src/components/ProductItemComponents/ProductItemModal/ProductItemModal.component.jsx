@@ -28,8 +28,8 @@ const ProductItemModal = ({image, text}) => {
 
     return(
         <div>
-            <button onClick={handleOpenModal}>{text}</button>
-            <Modal isOpen={modalIsOpen} style={customStyles}>
+            <button className='button-modal' onClick={handleOpenModal}>{text}</button>
+            <Modal isOpen={modalIsOpen} style={customStyles} ariaHideApp={false}>
                 <div className='modal-content'>
                     <img alt='modal-img' className='modal-img' src={image} />
                     <button className='button-modal' onClick={handleCloseModal}>Close</button>

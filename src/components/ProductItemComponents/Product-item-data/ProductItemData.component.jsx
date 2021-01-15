@@ -6,7 +6,8 @@ const ProductItemData = ({ productDetails }) => {
         <div className='details-container'>
             <div className='details-header'>Technical details</div>
             {
-                productDetails.map(({type, content, button},index) => {
+                productDetails.length ? (
+                    productDetails.map(({type, content, button},index) => {
                     return (
                         <div key={index} className='data'>
                             <div  className='data-header'>{type}</div>
@@ -31,6 +32,9 @@ const ProductItemData = ({ productDetails }) => {
                         </div>
                     )
                 }) 
+                )
+                :
+                <div>there is no such a product</div>
             }
         </div>
     )
