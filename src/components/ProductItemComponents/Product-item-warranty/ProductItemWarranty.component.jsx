@@ -6,8 +6,8 @@ const ProductItemWarranty = () => {
     return (
         <div className='warranty-break' style={
             {
-                background: `url(${warrantybg}) center center no-repeat fixed`,
-                backgroundSize: '100%'
+                background: `url(${warrantybg}) center center no-repeat`,
+                backgroundSize: 'cover'
             }}>
             <div className='mask'>
                 <img alt='warrantybackground' src={warrantyicon} />
