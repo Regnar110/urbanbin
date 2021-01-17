@@ -16,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('https://clamsy-treodot20202020.herokuapp.com/sendmail', {
+      const response = await fetch('https://trusting-jones-a58726.netlify.app/sendmail', {
                   method: "POST",
                   headers: {
                     'Accept': 'application/json',
