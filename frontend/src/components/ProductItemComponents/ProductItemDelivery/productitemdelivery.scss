@@ -1,0 +1,51 @@
+.delivery-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 300px;
+    }
+
+    span {
+        text-align: center;
+        color: white;
+        width: 100%;
+        padding: 20px;
+        font-size: calc(40px + (70 - 40) * ((100vw - 280px) / (1600 - 280)));
+        background-color: #2a31f2a4;
+    }
+
+    .delivery-images {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+
+        .delivery {
+            width: 50%;
+            height: 100%;
+            margin: 20px;
+        }
+    }
+
+    @media screen and(max-width: 800px) {
+
+        img {
+            width: 250px;
+        }
+
+        .delivery-images {
+            height: 800px;
+            flex-direction: column;
+            .delivery {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+    }
+}

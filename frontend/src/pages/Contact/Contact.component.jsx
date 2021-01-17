@@ -16,7 +16,7 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('https://trusting-jones-a58726.netlify.app/sendmail', {
+      const response = await fetch('http://localhost:3001/sendmail', {
                   method: "POST",
                   headers: {
                     'Accept': 'application/json',

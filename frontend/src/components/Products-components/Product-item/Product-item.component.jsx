@@ -6,6 +6,7 @@ import ProductItemSlider from '../../ProductItemComponents/Product-item-slider/P
 import ProductItemColors from '../../ProductItemComponents/Product-item-colors/Product-item-colors.component'
 import ProductItemData from '../../ProductItemComponents/Product-item-data/ProductItemData.component'
 import ProductItemWarranty from '../../ProductItemComponents/Product-item-warranty/ProductItemWarranty.component'
+import ProductItemDelivery from '../../ProductItemComponents/ProductItemDelivery/ProductItemDelivery.component'
 
 
 const ProductItem = ({match}) => {
@@ -27,7 +28,7 @@ const ProductItem = ({match}) => {
             redirect: 'follow'
           };
         try {
-            const response = await fetch(`https://trusting-jones-a58726.netlify.app/mgbs`, requestOptions)
+            const response = await fetch(`http://localhost:3001/mgbs`, requestOptions)
             const data = await response.json();
             console.log(data)
             setProductDetails(data.ProductDetails)
@@ -66,6 +67,7 @@ const ProductItem = ({match}) => {
                 </div>
             </div>
             <ProductItemWarranty />
+            <ProductItemDelivery />
         </div>
 
     )
