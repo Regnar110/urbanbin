@@ -8,6 +8,10 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/', (req, res) => {
+  res.json('im hereeee')
+})
+
 app.post('/mgbs', async (req, res) => {
   const { model } = req.body
   ProductsGet(model, req, res)
