@@ -4,6 +4,7 @@ const cors = require('cors') // cross origin resource sharing
 const { sendMail } = require('./controllers/sendmail/sendmail.js')
 const { ProductsGet } = require('./controllers/Products/ProductsGet.js')
 
+const PORT = 3001;
 const app = express();
 app.use(bodyParser.json())
 app.use(cors())
@@ -20,6 +21,6 @@ app.post('/mgbs', async (req, res) => {
 
 app.post('/sendmail', (req, res) => sendMail(req, res))
 
-app.listen(process.env.PORT , () => {
-  console.log(`listenning on ${process.env.PORT}`)
+app.listen(PORT , () => {
+  console.log(`listenning on ${PORT}`)
 })
