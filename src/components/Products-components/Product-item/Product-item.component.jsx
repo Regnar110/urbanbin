@@ -27,7 +27,7 @@ const ProductItem = ({match}) => {
             redirect: 'follow'
           };
         try {
-            const response = await fetch(`https://afternoon-oasis-07191.herokuapp.com/mgbs`, requestOptions)
+            const response = await fetch(`https://safe-island-97197.herokuapp.com/mgbs`, requestOptions)
             const data = await response.json();
             console.log(data)
             setProductDetails(data.ProductDetails)

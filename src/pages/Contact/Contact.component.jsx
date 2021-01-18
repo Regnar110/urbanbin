@@ -17,7 +17,7 @@ const Contact = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('https://afternoon-oasis-07191.herokuapp.com/sendmail', {
+      const response = await fetch('https://safe-island-97197.herokuapp.com/sendmail', {
                   method: "POST",
                   headers: {
                     'Accept': 'application/json',
@@ -80,9 +80,9 @@ const Contact = () => {
       </div>
       <ContactSectionHeader sectionTitle={'SEND US A MESSAGE'} />
       <div className='contact-second-row-mail-form' onSubmit={handleSubmit}>
-        <ContactUsForm type='text' name='sender' value={sender} label='Name/Company' handleChange={handleChange}/>
-        <ContactUsForm type='email' name='email' value={email} label='E-mail' handleChange={handleChange}/>
-        <ContactUsForm type='textarea' name='message' value={message} label='Your Message' handleChange={handleChange}/>
+        <ContactUsForm type='text' name='sender' value={sender} label='Name/Company' handleChange={handleChange} required='required'/>
+        <ContactUsForm type='email' name='email' value={email} label='E-mail' handleChange={handleChange} required='required'/>
+        <ContactUsForm type='textarea' name='message' value={message} label='Your Message' handleChange={handleChange} required='required'/>
         <CustomButton name='Send' type='submit' method={handleSubmit}/>
         {
         requestStatus === 'success' ? 
