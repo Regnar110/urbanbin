@@ -23,6 +23,7 @@ const sendMail = (req, res) => { //funkcja wysyłająca dane przysłane ze stron
     })
 }
 
+
 module.exports = {
     sendMail
 }
