@@ -18,6 +18,16 @@
             display: flex;
             justify-content: center;
         }
+
+
+    }        
+    
+    .go-to-contact {
+        width: 100%;
+        text-align: center;
+        p {
+            font-size: 30px;
+        }
     }
 
     @media screen and(max-width: 800px) {

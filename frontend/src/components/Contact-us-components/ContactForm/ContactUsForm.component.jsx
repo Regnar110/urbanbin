@@ -11,7 +11,7 @@ const ContactUsForm = ({label, type, handleChange,  ...otherProps}) => {
                 </div>
                 :            
                 <div className='mail-form-group'>
-                    <input className='mail-input' onChange={handleChange} {...otherProps}/>
+                    <input className='mail-input' onChange={handleChange} {...otherProps} required/>
                     <label className={`${otherProps.value.length ? 'shrink' : ''} mail-input-label`}>{label}</label>
                 </div>
             }

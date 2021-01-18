@@ -5,7 +5,7 @@ import construction from '../../../assets/Products/product-main/tiles/constructi
 import compatible from '../../../assets/Products/product-main/tiles/compatible.svg'
 import chip from '../../../assets/Products/product-main/tiles/chip.svg'
 import noflame from '../../../assets/Products/product-main/tiles/non-flammable.svg'
-import standards from '../../../assets/Products/product-main/tiles/standards.svg'
+import wastecollection from '../../../assets/Products/product-main/tiles/wastecollection.svg'
 
 const productTiles = [
     {
@@ -29,8 +29,8 @@ const productTiles = [
         desc: 'Containers are non-flammable'
     },
     {
-        img: standards,
-        desc: 'Containers meet the requirements of PN-EN 840'
+        img: wastecollection,
+        desc: 'Containers for selective waste collection'
     },
 ]
 

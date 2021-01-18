@@ -19,7 +19,7 @@ const Footer = ({history}) => {
                 <span onClick={()=>history.push('/contact')}>CONTACT US</span>
             </div>
             <div className='under-footer'>
-                <span> © URBANBIN - for a clean future 2021 | Developed by MateuszW</span>
+                <span> © URBANBIN - for a clean future 2021</span>
             </div>
         </div>
     )

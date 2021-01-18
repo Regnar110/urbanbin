@@ -5,7 +5,7 @@ import App from './containers/App'
 import { HashRouter } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals';
 
-ReactDOM.hydrate(
+ReactDOM.render(
   <HashRouter>
       <App />
   </HashRouter>,
