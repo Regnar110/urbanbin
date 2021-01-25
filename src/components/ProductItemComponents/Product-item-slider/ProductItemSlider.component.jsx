@@ -1,6 +1,6 @@
 import './productitemslider.scss'
 import { useState, useEffect } from 'react'
-import i1 from '../../../assets/Home/ProductCard/p1.jpg'
+import i1 from '../../../assets/newphoto.jpg'
 import i2 from '../../../assets/Home/ProductCard/p2.jpg'
 import i3 from '../../../assets/Home/ProductCard/p3.jpg'
 
@@ -33,7 +33,7 @@ const ProductItemSlider = ({modelColor}) => {
                     images={sliderImages}
                     showNavs={true}
                     slideDuration={0.3}
-                />
+        />
                 {modelColor}
         </div>
     )

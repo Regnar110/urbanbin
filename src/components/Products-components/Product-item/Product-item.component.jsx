@@ -2,7 +2,7 @@ import { useParams, withRouter } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './productitem.scss'
 import ProductItemHeader from '../Product-item/ProductItemHeader/ProductItemHeader.component'
-import ProductItemSlider from '../../ProductItemComponents/Product-item-slider/ProductItemSlider.component'
+import ProductItemSwiper from '../../ProductItemComponents/Product-item-swiper/ProductItemSwiper'
 import ProductItemData from '../../ProductItemComponents/Product-item-data/ProductItemData.component'
 import ProductItemWarranty from '../../ProductItemComponents/Product-item-warranty/ProductItemWarranty.component'
 import ProductItemDelivery from '../../ProductItemComponents/ProductItemDelivery/ProductItemDelivery.component'
@@ -53,7 +53,8 @@ const ProductItem = ({match}) => {
             <ProductItemHeader productName={productId.toUpperCase()}/>
             <div className='first-row'>
                 <div className='slider-colors'>
-                    <ProductItemSlider /> 
+                    {/* <ProductItemSlider />  ZMIENIAMY NA SWIPERA- PROBLEM ZE ZDJĘCIAMi*/}
+                    <ProductItemSwiper />
                 </div>
                 <div className='product-data'>
                     <ProductItemData productDetails={productDetails}/>
