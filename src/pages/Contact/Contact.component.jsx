@@ -13,8 +13,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [requestStatus, changeRequestStatus] = useState('')
-  // https://afternoon-oasis-07191.herokuapp.com/sendmail
-
+  
   const handleSubmit = async () => {
     try {
       const response = await fetch('https://safe-island-97197.herokuapp.com/sendmail', {

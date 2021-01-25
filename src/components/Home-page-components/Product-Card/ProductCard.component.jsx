@@ -5,7 +5,7 @@ const ProductCard = ({name, image, UrlLink, history}) => {
     return(
         <div className='product-card' onClick={() => history.push(`products/${UrlLink}`)} style={{
             background: `url(${image}) center center no-repeat`,
-            backgroundSize: 'cover'
+            backgroundSize: 'contain'
         }}>
             <div className='hover-mask' />
             <div className='card-hidden-footer'><div>CLICK AND CHECK</div></div>

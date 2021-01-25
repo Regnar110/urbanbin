@@ -2,7 +2,7 @@ import HomeSlider from '../../components/Home-page-components/Home-slider/Home-s
 import HomeAbout from '../../components/Home-page-components/Home-about/HomeAbout.component'
 import HomeProducts from '../../components/Home-page-components/HomeProducts/HomeProducts.component'
 import HomeQuality from '../../components/Home-page-components/Home-Quality/HomeQuality.component'
-import p1 from '../../assets/Home/ProductCard/p1.jpg'
+import p1 from '../../assets/newphoto.jpg'
 import p2 from '../../assets/Home/ProductCard/p2.jpg' 
 import p3 from '../../assets/Home/ProductCard/p3.jpg' 
 import p4 from '../../assets/Home/ProductCard/p4.jpg'
