@@ -1,10 +1,11 @@
 import './productitemdata.scss'
 import ProductItemModal from '../ProductItemModal/ProductItemModal.component'
+import ProductNotFound from '../ProductNotFound/ProductNotFound'
 
 const ProductItemData = ({ productDetails }) => {
     return (
         <div className='details-container'>
-            <div className='details-header'>Technical details</div>
+        <div className='details-header'>Technical details</div>
             {
                 productDetails.length ? (
                     productDetails.map(({type, content, button},index) => {
@@ -34,7 +35,8 @@ const ProductItemData = ({ productDetails }) => {
                 }) 
                 )
                 :
-                <div>there is no such a product</div>
+                <ProductNotFound />
+                
             }
         </div>
     )

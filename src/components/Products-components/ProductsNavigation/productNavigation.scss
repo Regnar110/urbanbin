@@ -4,7 +4,8 @@
     
     .opening-button {
         overflow: hidden;
-        background-color: #2a31f2a4;
+        width: 100%;
+        background: linear-gradient(90deg, #2a31f2ab 10%, #e3e3e3 90%);
         padding: 0px 15px;
         display: flex;
         align-items: center;
