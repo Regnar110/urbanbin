@@ -1,4 +1,4 @@
-import { useParams, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './productitem.scss'
 import ProductItemHeader from '../Product-item/ProductItemHeader/ProductItemHeader.component'
@@ -13,6 +13,7 @@ import ProductItemLoading from '../../ProductItemComponents/ProductItemLoading/P
 const ProductItem = ({match}) => { 
     const [model, setModel] = useState('')
     const [productDetails , setProductDetails] = useState([])
+    const [productImages, setProductImages] = useState([])
     const [loading, setLoading] = useState(false)
 
     const handleFetchProductDetails = async (currentProduct) => {
@@ -30,9 +31,9 @@ const ProductItem = ({match}) => {
             setLoading(true);
             const response = await fetch(`https://safe-island-97197.herokuapp.com/mgbs`, requestOptions)
             const data = await response.json();
-            console.log(data)
             setProductDetails(data.ProductDetails)
             setModel(data.name)
+            setProductImages(data.ProductImages)
         } catch(err) {
             console.log(err)
         } finally {
@@ -59,7 +60,7 @@ const ProductItem = ({match}) => {
                     <>
                         <div className='first-row'>
                             <div className='slider-colors'>
-                                <ProductItemSwiper />
+                                <ProductItemSwiper productImages={productImages}/>
                             </div>
                             <div className='product-data'>
                                 <ProductItemData productDetails={productDetails}/>

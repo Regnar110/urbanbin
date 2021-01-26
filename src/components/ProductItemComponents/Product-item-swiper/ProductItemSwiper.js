@@ -7,11 +7,10 @@ import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/swiper.scss';
 
-import i1 from '../../../assets/newphoto.jpg'
-
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const ProductItemSwiper = () => {
+const ProductItemSwiper = ({ productImages }) => {
+
     return(
         <div className='product-item-swiper'>
             <Swiper
@@ -21,10 +20,19 @@ const ProductItemSwiper = () => {
                 pagination={{ clickable: true, dynamicBullets: true }}
                 scrollbar={{ draggable: true }}
             >
-                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
-                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
-                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
-                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
+            {
+                productImages.length >= 1 ? 
+                    (
+                        productImages.map((imageUrl, index) => {
+                            return <SwiperSlide key={index}><img alt='item' src={imageUrl}/></SwiperSlide>
+                        })
+                    )
+                    :
+                    (
+                        <SwiperSlide>There is no images to display</SwiperSlide>
+                    )
+            }
+                
             </Swiper>
         </div>
     )
