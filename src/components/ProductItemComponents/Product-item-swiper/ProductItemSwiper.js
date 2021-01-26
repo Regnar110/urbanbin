@@ -15,16 +15,16 @@ const ProductItemSwiper = () => {
     return(
         <div className='product-item-swiper'>
             <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      navigation
-      pagination={{ clickable: true, dynamicBullets: true }}
-      scrollbar={{ draggable: true }}
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true, dynamicBullets: true }}
+                scrollbar={{ draggable: true }}
             >
-                <SwiperSlide><img src={i1}/></SwiperSlide>
-                <SwiperSlide><img src={i1}/></SwiperSlide>
-                <SwiperSlide><img src={i1}/></SwiperSlide>
-                <SwiperSlide><img src={i1}/></SwiperSlide>
+                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
+                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
+                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
+                <SwiperSlide><img alt='item' src={i1}/></SwiperSlide>
             </Swiper>
         </div>
     )

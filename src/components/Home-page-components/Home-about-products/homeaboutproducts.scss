@@ -1,0 +1,131 @@
+@mixin data-tiles {
+    .hap-first-data {
+        background-color: #2a31f2a4;
+        color: white;
+        width: 50%;
+        height: 100%;
+
+        h1 {
+            text-align: center;
+        }
+        .data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+             span{ 
+                width: 80%;
+                margin-top: 10px;
+                font-family: 'Roboto', sans-serif;
+                font-size: calc(17px + (25 - 17) * ((100vw - 280px) / (1600 - 280)));
+                text-align: center;
+            }
+        }
+
+    }
+    
+    .hap-second-data {
+        color: black;
+        width: 50%;
+        height: 100%;
+        
+        h1 {
+            text-align: center;
+            p {
+                margin: 0;
+                font-size: calc(17px + (25 - 17) * ((100vw - 280px) / (1600 - 280)));
+            }
+        }
+
+        .data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+            span{ 
+               width: 80%;
+               font-family: 'Roboto', sans-serif;
+               font-size: calc(17px + (25 - 17) * ((100vw - 280px) / (1600 - 280)));
+               margin-top: 10px;
+               text-align: center;
+           }
+       }
+    }
+}
+
+.home-about-products {
+    font-family: 'Open Sans Condensed', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .hap-first-row {
+        width: 70%;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        @include data-tiles();
+    }
+
+    .hap-second-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        width: 70%;
+        height: 400px;
+
+        @include data-tiles();
+    }
+
+    @media screen and(max-width:680px) {
+        .hap-first-row {
+            width: 100%;
+        }
+    
+        .hap-second-row {
+            width: 100%;
+        }
+    }
+
+    @media screen and(max-width: 450px) {
+        .hap-first-row {
+            width: 100%;
+            flex-direction: column;
+            height: 800px;
+
+            .hap-first-data {
+                width: 100%;
+                height: 50%;
+            }
+
+            .hap-second-data {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    
+        .hap-second-row {
+            width: 100%;
+            height: 800px;
+            flex-direction: column;
+            
+            .hap-first-data {
+                width: 100%;
+                height: 50%;
+            }
+
+            .hap-second-data {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    }
+}

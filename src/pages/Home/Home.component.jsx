@@ -2,6 +2,8 @@ import HomeSlider from '../../components/Home-page-components/Home-slider/Home-s
 import HomeAbout from '../../components/Home-page-components/Home-about/HomeAbout.component'
 import HomeProducts from '../../components/Home-page-components/HomeProducts/HomeProducts.component'
 import HomeQuality from '../../components/Home-page-components/Home-Quality/HomeQuality.component'
+import HomeAboutProducts from '../../components/Home-page-components/Home-about-products/HomeAboutProducts'
+
 import p1 from '../../assets/newphoto.jpg'
 import p2 from '../../assets/Home/ProductCard/p2.jpg' 
 import p3 from '../../assets/Home/ProductCard/p3.jpg' 
@@ -66,7 +68,9 @@ const Home = () => {
       <HomeSlider  sliderList={sliderList}/>
       <HomeAbout />
       <HomeProducts productList={productList}/>
+      <HomeAboutProducts />
       <HomeQuality />
+
     </div>
   );
 
