@@ -10,9 +10,7 @@ import CustomButton from '../../CustomButton/CustomButton.component'
 import ProductItemLoading from '../../ProductItemComponents/ProductItemLoading/ProductItemLoading'
 
 
-const ProductItem = ({match}) => {
-    let { productId } = useParams();
-
+const ProductItem = ({match}) => { 
     const [model, setModel] = useState('')
     const [productDetails , setProductDetails] = useState([])
     const [loading, setLoading] = useState(false)
@@ -32,7 +30,9 @@ const ProductItem = ({match}) => {
             setLoading(true);
             const response = await fetch(`https://safe-island-97197.herokuapp.com/mgbs`, requestOptions)
             const data = await response.json();
+            console.log(data)
             setProductDetails(data.ProductDetails)
+            setModel(data.name)
         } catch(err) {
             console.log(err)
         } finally {
@@ -42,16 +42,15 @@ const ProductItem = ({match}) => {
     }
 
     useEffect(() => { // przy zamontowaniu będziemy ściągać dane techniczne konkretnego produktu + zdjęcia standard i zdjęcia techniczne
-        setModel(match.params.productId);
         handleFetchProductDetails(match.params.productId);
-        console.log('zostałem zamontowany i mój produkt to ' + match.params.productId) // stan się zmienia na bierząca po wejściu z home i w przerzycaniu menu
+        console.log('zostałem zamontowany i mój produkt to ' + model) // stan się zmienia na bierząca po wejściu z home i w przerzycaniu menu
         
     }, [model, match.params.productId])
     
 
     return (
         <div className='product-item'>
-            <ProductItemHeader productName={productId.toUpperCase()}/>
+            <ProductItemHeader productName={model.toUpperCase()}/>
             {
                 loading ? (
                     <ProductItemLoading />
