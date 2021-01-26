@@ -7,6 +7,7 @@ import ProductItemData from '../../ProductItemComponents/Product-item-data/Produ
 import ProductItemWarranty from '../../ProductItemComponents/Product-item-warranty/ProductItemWarranty.component'
 import ProductItemDelivery from '../../ProductItemComponents/ProductItemDelivery/ProductItemDelivery.component'
 import CustomButton from '../../CustomButton/CustomButton.component'
+import ProductItemLoading from '../../ProductItemComponents/ProductItemLoading/ProductItemLoading'
 
 
 const ProductItem = ({match}) => {
@@ -14,6 +15,7 @@ const ProductItem = ({match}) => {
 
     const [model, setModel] = useState('')
     const [productDetails , setProductDetails] = useState([])
+    const [loading, setLoading] = useState(false)
 
     const handleFetchProductDetails = async (currentProduct) => {
         const requestOptions = {
@@ -27,15 +29,14 @@ const ProductItem = ({match}) => {
             redirect: 'follow'
           };
         try {
+            setLoading(true);
             const response = await fetch(`https://safe-island-97197.herokuapp.com/mgbs`, requestOptions)
             const data = await response.json();
-            console.log(data)
             setProductDetails(data.ProductDetails)
-
         } catch(err) {
-
             console.log(err)
-
+        } finally {
+            setLoading(false)
         }
 
     }
@@ -51,21 +52,29 @@ const ProductItem = ({match}) => {
     return (
         <div className='product-item'>
             <ProductItemHeader productName={productId.toUpperCase()}/>
-            <div className='first-row'>
-                <div className='slider-colors'>
-                    {/* <ProductItemSlider />  ZMIENIAMY NA SWIPERA- PROBLEM ZE ZDJĘCIAMi*/}
-                    <ProductItemSwiper />
-                </div>
-                <div className='product-data'>
-                    <ProductItemData productDetails={productDetails}/>
-                </div>
-            </div>
-            <ProductItemWarranty />
-            <ProductItemDelivery />
-            <div className='go-to-contact'>
-                <p>Are you interested in our products?</p>
-                <CustomButton name={'Contact us'} buttonUrlLink={'/contact'} />
-            </div>
+            {
+                loading ? (
+                    <ProductItemLoading />
+                ): 
+                (
+                    <>
+                        <div className='first-row'>
+                            <div className='slider-colors'>
+                                <ProductItemSwiper />
+                            </div>
+                            <div className='product-data'>
+                                <ProductItemData productDetails={productDetails}/>
+                            </div>
+                        </div>
+                        <ProductItemWarranty />
+                        <ProductItemDelivery />
+                        <div className='go-to-contact'>
+                            <p>Are you interested in our products?</p>
+                            <CustomButton name={'Contact us'} buttonUrlLink={'/contact'} />
+                        </div>
+                    </>
+                )
+            }
         </div>
 
     )

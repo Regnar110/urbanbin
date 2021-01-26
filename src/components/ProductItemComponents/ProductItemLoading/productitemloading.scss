@@ -1,0 +1,19 @@
+.product-loading {
+    font-size: 30px;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     
+    p {
+        text-align: center;
+    }
+
+    .small {
+        margin-top: 50px;
+        font-size: 20px;
+        width: 20%;
+    }
+}

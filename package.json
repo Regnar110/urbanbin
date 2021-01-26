@@ -17,6 +17,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-simple-image-slider": "^2.0.1",
+    "react-spinners": "^0.10.4",
     "swiper": "^6.4.8",
     "web-vitals": "^0.2.4"
   },
@@ -32,6 +33,11 @@
       "react-app/jest"
     ]
   },
+  "babel": {
+    "presets": ["@babel/preset-react", "@babel/preset-env"],
+    "plugins": ["emotion"]
+  },
+
   "browserslist": {
     "production": [
       ">0.2%",
