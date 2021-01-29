@@ -14,7 +14,8 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [requestStatus, changeRequestStatus] = useState('')
   
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const response = await fetch('https://safe-island-97197.herokuapp.com/sendmail', {
                   method: "POST",
@@ -77,12 +78,12 @@ const Contact = () => {
           <ContactMap />
         </div>
       </div>
-      <ContactSectionHeader sectionTitle={'SEND US A MESSAGE'} />
-      <div className='contact-second-row-mail-form' onSubmit={handleSubmit}>
-        <ContactUsForm type='text' name='sender' value={sender} label='Name/Company' handleChange={handleChange} required='required'/>
-        <ContactUsForm type='email' name='email' value={email} label='E-mail' handleChange={handleChange} required='required'/>
-        <ContactUsForm type='textarea' name='message' value={message} label='Your Message' handleChange={handleChange} required='required'/>
-        <CustomButton name='Send' type='submit' method={handleSubmit}/>
+      <ContactSectionHeader sectionTitle={'SEND US A MESSAGE'}/>
+      <form className='contact-second-row-mail-form' onSubmit={handleSubmit}>
+        <ContactUsForm type='text' name='sender' value={sender} label='Name/Company' handleChange={handleChange} required/>
+        <ContactUsForm type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name='email' value={email} label='E-mail' handleChange={handleChange} required/>
+        <ContactUsForm type='textarea' name='message' value={message} label='Your Message' handleChange={handleChange} required/>
+        <CustomButton name='Send' type='submit'/>
         {
         requestStatus === 'success' ? 
           <RequestConfirm title={'Message Sent'}/>
@@ -92,7 +93,7 @@ const Contact = () => {
           :
             null
       }
-      </div>
+      </form>
     </div>
   );
 }
