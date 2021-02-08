@@ -4,10 +4,10 @@ import HomeProducts from '../../components/Home-page-components/HomeProducts/Hom
 import HomeQuality from '../../components/Home-page-components/Home-Quality/HomeQuality.component'
 import HomeAboutProducts from '../../components/Home-page-components/Home-about-products/HomeAboutProducts'
 
-import p1 from '../../assets/newphoto.jpg'
+import p1 from '../../assets/Home/ProductCard/120.jpg'
 import p2 from '../../assets/Home/ProductCard/p2.jpg' 
 import p3 from '../../assets/Home/ProductCard/p3.jpg' 
-import p4 from '../../assets/Home/ProductCard/p4.jpg'
+import p4 from '../../assets/Home/ProductCard/1100.jpg'
 import slide1 from '../../assets/Company/bg.jpg'
 import slide2 from '../../assets/Home/HomeSlider/slide2.jpg'
 import slide3 from '../../assets/Home/HomeSlider/slide3.jpg'
