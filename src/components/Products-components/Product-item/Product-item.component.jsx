@@ -14,6 +14,7 @@ const ProductItem = ({match}) => {
     const [model, setModel] = useState('')
     const [productDetails , setProductDetails] = useState([])
     const [productImages, setProductImages] = useState([])
+    const [productDeliveryImages, setProductDeliveryImages] = useState([])
     const [loading, setLoading] = useState(false)
 
     const handleFetchProductDetails = async (currentProduct) => {
@@ -34,6 +35,7 @@ const ProductItem = ({match}) => {
             setProductDetails(data.ProductDetails)
             setModel(data.name)
             setProductImages(data.ProductImages)
+            setProductDeliveryImages(data.ProductPack)
         } catch(err) {
             console.log(err)
         } finally {
@@ -67,7 +69,7 @@ const ProductItem = ({match}) => {
                             </div>
                         </div>
                         <ProductItemWarranty />
-                        <ProductItemDelivery />
+                        <ProductItemDelivery deliveryImages={productDeliveryImages}/>
                         <div className='go-to-contact'>
                             <p>Are you interested in our products?</p>
                             <CustomButton name={'Contact us'} buttonUrlLink={'/contact'} />

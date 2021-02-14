@@ -14,23 +14,22 @@
         color: white;
         width: 100%;
         padding: 20px;
-        font-size: calc(40px + (70 - 40) * ((100vw - 280px) / (1600 - 280)));
+        font-size: calc(35px + (70 - 35) * ((100vw - 280px) / (1600 - 280)));
         background-color: #2a31f2a4;
     }
 
     .delivery-images {
         width: 100%;
-        height: 500px;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 30px;
 
-        .delivery {
-            width: 50%;
-            height: 100%;
-            margin: 20px;
+        .delivery-img {
+            width: 500px;
+            margin: 20px 0;
         }
+
     }
 
     @media screen and(max-width: 800px) {
@@ -40,11 +39,10 @@
         }
 
         .delivery-images {
-            height: 800px;
             flex-direction: column;
-            .delivery {
+
+            .delivery-img {
                 width: 100%;
-                margin: 20px 0;
             }
         }
     }
