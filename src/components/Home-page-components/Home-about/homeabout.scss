@@ -13,6 +13,9 @@
             font-size: calc(17px + (20 - 17) * ((100vw - 280px) / (1600 - 280)));
             color: rgba(0, 0, 0, 0.5);
             font-weight: 900;
+                span {
+                    color: #2a31f2;
+                }
         }  
     }
 }

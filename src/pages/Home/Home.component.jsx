@@ -27,7 +27,7 @@ const Home = () => {
       image: p2
     },
     {
-      product: 'MGBS-700L',
+      product: 'MGBS-660L',
       UrlLink: 'mgbs-700l',
       image: p3
     },
@@ -37,7 +37,7 @@ const Home = () => {
       image: p4
     },
     {
-      product: 'MGBS-2500L',
+      product: 'MGBS-2200L',
       UrlLink: 'mgbs-2500l',
       image: p2
     },
