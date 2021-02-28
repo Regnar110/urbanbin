@@ -22,7 +22,7 @@ const productTiles = [
     },
     {
         img: chip,
-        desc: 'CHIP identification possible'
+        desc: 'CHIP identification possible (RFID)'
     },
     {
         img: noflame,
@@ -47,13 +47,13 @@ const ProductMain = () => {
             <div className='gradient-break'/>
             <div className='about-products'>
             <p>URBANBIN containers are intended for the storage and transport of various types of waste.
-            They are made of high-quality galvanized sheet metal, additionally reinforced with numerous ribs, ensuring high rigidity and aesthetics of the containers.
+            They are made of high-quality galvanized sheet metal, additionally reinforced with numerous embossments, ensuring high rigidity and aesthetics of the containers.
             The components of the structure are joined by welding and braze welding.
             
 All containers are protected against corrosion by powder coating, in accordance with the colors of selective waste collection or according to individual customer needs, architecture and style (e.g. loft).</p>
             <p>
             The lids of the containers have reinforcement embossing, are tiltable and have handles for opening and transport.
-            The bottoms of the containers are separated from the ground and additionally protected with anti-corrosive rubber glued in, which insulates the container from its bottom, ensuring its quiet operation and aesthetics.
+            The bottoms of the containers are separated from the ground and additionally protected with anti-corrosive rubber glued in, which insulates the container from the ground, ensuring its quiet operation and aesthetics.
             All containers are equipped with wheels that facilitate their easy movement.
             </p>
             </div>

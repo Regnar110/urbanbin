@@ -60,16 +60,17 @@ const Contact = () => {
           <div className='contact-details'>
             <div className='data'>
               <div className='data-header'>Contact number</div>
-              <p>+48 697 003 008</p>
+              <span>+48 500 430 017 (PL)</span>
+              <span>+48 697 003 008 (ENG)</span>
             </div>
             <div className='data'>
               <div className='data-header'>Address</div>
-              <p>Bp.Dominika 43a</p>
+              <p>Bp.Dominika 43</p>
               <p>83-200 Starogard Gdański, Poland</p>
             </div>
             <div className='data'>
               <div className='data-header'>E-mail</div>
-              <p>biuro@urbanbin.pl</p>
+              <p>urbanbin.biuro@gmail.com</p>
             </div>
           </div>
         </div>

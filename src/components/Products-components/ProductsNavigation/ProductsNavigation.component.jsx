@@ -15,16 +15,16 @@ const ProductNavigation = ({history, productChange}) => {
             UrlLink: 'mgbs-240l'
         },
         {
-            product: 'MGBS-700L',
-            UrlLink: 'mgbs-700l'
+            product: 'MGBS-660L',
+            UrlLink: 'mgbs-660l'
         },
         {
             product: 'MGBS-1100L',
             UrlLink: 'mgbs-1100l'
         },
         {
-            product: 'MGBS-2500L',
-            UrlLink: 'mgbs-2500l'
+            product: 'MGBS-2200L',
+            UrlLink: 'mgbs-2200l'
             
         },
         {

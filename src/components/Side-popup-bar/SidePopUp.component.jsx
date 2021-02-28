@@ -5,16 +5,17 @@ const SidePopUpBar = () => {
 
     const popUpsArray = [
         {
-            content1: '+48 697 003 008',
+            content1: '+48 697 003 008 (ENG)',
+            content2: '+48 500 430 017 (PL)',
             faIcon: 'fas fa-phone fa-2x'
         },
         {
-            content1: 'Bp. Dominika 43a',
+            content1: 'Bp. Dominika 43',
             content2: '83-200 Starogard Gdański',
             image: poland
         },
         {
-            content1: 'biuro@urbanbin.pl',
+            content1: 'urbanbin.biuro@gmail.com',
             faIcon: 'fas fa-at fa-2x'
         }
     ]

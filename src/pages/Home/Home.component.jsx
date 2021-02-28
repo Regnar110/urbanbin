@@ -4,10 +4,12 @@ import HomeProducts from '../../components/Home-page-components/HomeProducts/Hom
 import HomeQuality from '../../components/Home-page-components/Home-Quality/HomeQuality.component'
 import HomeAboutProducts from '../../components/Home-page-components/Home-about-products/HomeAboutProducts'
 
-import p1 from '../../assets/Home/ProductCard/120.jpg'
-import p2 from '../../assets/Home/ProductCard/p2.jpg' 
-import p3 from '../../assets/Home/ProductCard/p3.jpg' 
-import p4 from '../../assets/Home/ProductCard/1100.jpg'
+import p120 from '../../assets/Home/ProductCard/120.jpg'
+import p240 from '../../assets/Home/ProductCard/240.jpg' 
+import p700 from '../../assets/Home/ProductCard/700.jpg' 
+import p1100 from '../../assets/Home/ProductCard/1100.jpg'
+import p2500 from '../../assets/Home/ProductCard/2500.jpg'
+import pBin from '../../assets/Home/ProductCard/street-bin.jpg'
 import slide1 from '../../assets/Company/bg.jpg'
 import slide2 from '../../assets/Home/HomeSlider/slide2.jpg'
 import slide3 from '../../assets/Home/HomeSlider/slide3.jpg'
@@ -19,32 +21,32 @@ const Home = () => {
     {
       product: 'MGBS-120L',
       UrlLink: 'mgbs-120l',
-      image: p1
+      image: p120
     },
     {
       product: 'MGBS-240L',
       UrlLink: 'mgbs-240l',
-      image: p2
+      image: p240
     },
     {
       product: 'MGBS-660L',
-      UrlLink: 'mgbs-700l',
-      image: p3
+      UrlLink: 'mgbs-660l',
+      image: p700
     },
     {
       product: 'MGBS-1100L',
       UrlLink: 'mgbs-1100l',
-      image: p4
+      image: p1100
     },
     {
       product: 'MGBS-2200L',
-      UrlLink: 'mgbs-2500l',
-      image: p2
+      UrlLink: 'mgbs-2200l',
+      image: p2500
     },
     {
       product: 'STREET BINS',
       UrlLink: 'street-bin',
-      image: p4
+      image: pBin
     },
   ]
 
